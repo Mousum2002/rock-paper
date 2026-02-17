@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Rock Paper Scissors </title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A simple Rock Paper Scissors game. Play in your browser, no sign-up required.">
+        <title>Rock Paper Scissors</title>
+        <script>(function(){var p=location.pathname; if(p.endsWith('/')){} else if(p.split('/').pop().indexOf('.')!==-1) p=p.replace(/\/[^\/]+$/,'/'); else p+='/'; document.write('<base href="'+location.protocol+'//'+location.host+p+'" />');})();</script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script src = "script.js"></script>
+        <p class="title">Rock paper Scissors</p>
 
-        <p class="title">
-            Rock paper Scissors
-        </p>
-        
-        <button onclick="playResult('Rock');" class="move-button"><img src="img/RockEmoji.png"class="move-icon"></button>
-        <button onclick="playResult('Paper');" class="move-button"> <img src = "img/PaperEmoji.png" class="move-icon">   </button>
-        <button onclick=" playResult('Scissors');" class="move-button"> <img src ="img/ScissorsEmoji.png" class="move-icon"> </button>
-        <p class = "js-result"></p>
-        <p class = "compyou"></p>
-        <p class = "js-score"></p>
-        <button onclick="resetScore();" class="reset-score-button">Reset Score</button>
-        <button class = "auto_play_button" onclick="autoplay();">  Auto Play  </button>
+        <button type="button" onclick="playResult('Rock');" class="move-button"><img src="img/RockEmoji.png" alt="Rock" class="move-icon"></button>
+        <button type="button" onclick="playResult('Paper');" class="move-button"><img src="img/PaperEmoji.png" alt="Paper" class="move-icon"></button>
+        <button type="button" onclick="playResult('Scissors');" class="move-button"><img src="img/ScissorsEmoji.png" alt="Scissors" class="move-icon"></button>
+        <p class="js-result"></p>
+        <p class="compyou"></p>
+        <p class="js-score"></p>
+        <button type="button" onclick="resetScore();" class="reset-score-button">Reset Score</button>
+        <button type="button" class="auto_play_button" onclick="autoplay();">Auto Play</button>
+
+        <script src="script.js"></script>
     </body>
 </html>
