@@ -1,0 +1,57 @@
+.result_icon{
+    height: 40px;
+
+}
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+.move-button {
+background-color: transparent;
+border: 3px solid white;
+width: 120px;
+height: 120px;
+border-radius: 60px;
+margin-right: 10px;
+cursor: pointer;
+}
+body{
+    background-color: rgb(25, 25, 25);
+color: white;
+font-family: Arial;
+}
+.move-icon {
+height: 50px;
+}
+
+.js-score {
+font-size: 25px;
+font-weight: bold;
+margin-top: 50px;
+}
+.js-result {
+font-size: 30px;
+font-weight: bold;
+margin-top: 40px;
+}
+
+.reset-score-button,.auto_play_button {
+width: 120px;
+background-color: white;
+border: none;
+font-size: 15px;
+padding: 8px 15px;
+cursor: pointer;
+border-radius: 5px;
+margin-left: 8px;
+}
+.is-reseted {
+width: 129px;
+background-color: rgba(240, 240, 240, 0.646);
+color: black;
+cursor:not-allowed;}
+
+.is-autoplaying {
+width: 140px;}
