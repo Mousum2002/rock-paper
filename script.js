@@ -50,7 +50,7 @@ localStorage.setItem('score', JSON.stringify(scores));}
 
 function showcompyou(u,m){
 
-    document.querySelector('.compyou').innerHTML = `You <img src = "img/${u}Emoji.png" class= "result_icon"> Mechine <img src = "img/${m}Emoji.png" class= "result_icon">`;
+    document.querySelector('.compyou').innerHTML = 'You <img src="img/' + u + 'Emoji.png" alt="" class="result_icon"> Machine <img src="img/' + m + 'Emoji.png" alt="" class="result_icon">';
 }
 let isAutoPlaying = false;
 let intervalId;
@@ -73,5 +73,3 @@ function autoplay()
         auto_play_button.classList.remove('is-autoplaying'); 
     }
 }
-
-
