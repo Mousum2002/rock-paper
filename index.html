@@ -20,6 +20,29 @@
         <button type="button" onclick="resetScore();" class="reset-score-button">Reset Score</button>
         <button type="button" class="auto_play_button" onclick="autoplay();">Auto Play</button>
 
+
+        <script>
+        window.addEventListener('load', () => {
+            const images = document.querySelectorAll('.move-icon');
+            images.forEach(img => {
+                const originalSrc = img.src;
+                img.onerror = () => {
+                    console.error('Image failed:', originalSrc);
+                    img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5' + 
+                                  encodeURIComponent(btoa((img.alt === 'Rock' ? '🪨' : img.alt === 'Paper' ? '📄' : '✂️'))) + '</dGV4dD48L3N2Zz4=';
+                    img.style.filter = 'grayscale(1)';  // Visual cue it's broken
+                };
+                // Pre-fetch check
+                fetch(originalSrc, {method: 'HEAD'})
+                    .then(res => {
+                        if (!res.headers.get('content-type')?.startsWith('image/') || res.headers.get('content-length') === '0') {
+                            img.onerror();
+                        }
+                    });
+            });
+        });
+        </script>
+
         <script src="script.js"></script>
     </body>
 </html>
