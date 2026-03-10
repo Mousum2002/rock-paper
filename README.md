@@ -1,19 +1,25 @@
-<<<<<<< HEAD
-visit: 
-https://mousum2002.github.io/rock-paper/
-for full preview
-=======
 # Rock Paper Scissors
 
-A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript.
+A browser-based Rock Paper Scissors game built with **vanilla JavaScript**, HTML, and CSS.
 
-**Live preview:** [https://mousum2002.github.io/rock-paper/](https://mousum2002.github.io/rock-paper/)
+> **⚠️ Live preview is currently down** — the GitHub Pages deployment was not displaying properly in some browsers due to MIME type issues with images. It may be re-hosted on Firebase at a later date.
 
-## If your browser shows "Deceptive site" / Safe Browsing warning
+Here is a general functionality breakdown:
 
-This site is a harmless game and does not collect passwords or personal data. If Google Safe Browsing has flagged it by mistake:
+- **Play** — Choose Rock, Paper, or Scissors; the machine picks randomly and the result is shown instantly.
+- **Score tracking** — Wins, losses, and ties are tracked and persisted via `localStorage`.
+- **Reset score** — Resets all counters and disables the button until the next round.
+- **Auto Play** — Plays a random move every second automatically; toggle to stop.
 
-1. **Request a review** (recommended): Go to [Google Safe Browsing – Report a problem](https://safebrowsing.google.com/safebrowsing/report_error/) and report that `https://mousum2002.github.io/rock-paper/` is safe and was flagged in error. Explain it is a personal Rock Paper Scissors game project with no login or payment.
-2. **Temporary workaround:** On the warning page, use the link **“visitare questo sito web non sicuro”** / **“Visit this unsafe site”** to proceed. Only do this if you are sure you are on the correct URL.
+## Structure
 
-Removal of the flag is done by Google and can take some time after you submit the report.
+```
+├── index.html    # Game UI and logic entry point
+├── script.js     # Game logic (play, score, autoplay)
+├── style.css     # Styling
+└── img/          # Rock, Paper, Scissors emoji images
+```
+
+## Tech Stack
+
+Vanilla JS · HTML5 · CSS3 · localStorage · GitHub Pages
